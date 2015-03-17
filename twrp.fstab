@@ -1,0 +1,9 @@
+/system       ext4          /dev/block/platform/soc.0/by-name/system
+/data         f2fs          /dev/block/platform/soc.0/by-name/userdata   rw,discard,nosuid,nodev,noatime,nodiratime,inline_xattr,inline_data  wait,check,encryptable=/dev/block/platform/soc.0/by-name/metadata
+/cache        ext4          /dev/block/platform/soc.0/by-name/cache
+/boot         emmc          /dev/block/platform/soc.0/by-name/boot
+/recovery     emmc          /dev/block/platform/soc.0/by-name/recovery
+
+/external_sd  auto          /dev/block/mmcblk1p1  /dev/block/mmcblk1     flags=display="Micro SDcard";storage;wipeingui;removable;andsec
+/usb_otg      auto          /devices/platform/msm_hsusb                  flags=display="USB-OTG";storage;wipeingui;removable
+/sd-ext       auto          /dev/block/mmcblk1p2                         flags=display="SD-Ext";wipeingui;removable
