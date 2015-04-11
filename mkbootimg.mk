@@ -8,7 +8,7 @@ LOCAL_PATH := $(call my-dir)
 KERNEL_CONFIG := $(KERNEL_OUT)/.config
 MSM8916_DTS_NAMES := msm8916
 
-MSM8916_DTS_FILES = $(wildcard $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8916-condor*.dts)
+MSM8916_DTS_FILES = $(wildcard $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8916-*.dts)
 MSM8916_DTS_FILE = $(lastword $(subst /, ,$(1)))
 DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(call MSM8916_DTS_FILE,$(1))))
 ZIMG_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%-zImage,$(call MSM8916_DTS_FILE,$(1))))
@@ -25,7 +25,10 @@ endef
 
 
 ## Build and run dtbtool
-DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolCM$(HOST_EXECUTABLE_SUFFIX)
+DTBTOOL := $(TARGET_KERNEL_SOURCE)/tools/dtbtool/dtbtool
+$(DTBTOOL):
+	make -C $(TARGET_KERNEL_SOURCE)/tools/dtbtool
+
 INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 
 $(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr $(INSTALLED_KERNEL_TARGET)
