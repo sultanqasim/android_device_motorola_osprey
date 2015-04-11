@@ -1,0 +1,8 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "sultanqasim/android_kernel_surnia",
+    "target_path": "kernel/motorola/msm8916",
+    "revision":    "squid_twrp"
+  }
+]
