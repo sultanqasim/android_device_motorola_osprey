@@ -20,7 +20,7 @@ INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 $(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr $(INSTALLED_KERNEL_TARGET)
 	@echo -e ${CL_CYN}"Start DT image: $@"${CL_RST}
 	$(call pretty,"Target dt image: $(INSTALLED_DTIMAGE_TARGET)")
-	$(hide) $(DTBTOOL) -o $(INSTALLED_DTIMAGE_TARGET) -s $(BOARD_KERNEL_PAGESIZE) -p $(KERNEL_OUT)/scripts/dtc/ $(KERNEL_OUT)/arch/arm/boot/dts/msm8916-surnia-p3.dtb
+	$(hide) $(DTBTOOL) -o $(INSTALLED_DTIMAGE_TARGET) -s $(BOARD_KERNEL_PAGESIZE) -p $(KERNEL_OUT)/scripts/dtc/ $(KERNEL_OUT)/arch/arm/boot/dts/
 	@echo -e ${CL_CYN}"Made DT image: $@"${CL_RST}
 
 
