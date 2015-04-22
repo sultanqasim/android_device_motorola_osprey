@@ -6,4 +6,3 @@
 
 /external_sd  auto          /dev/block/mmcblk1p1  /dev/block/mmcblk1     flags=display="Micro SDcard";storage;wipeingui;removable;andsec
 /usb_otg      auto          /devices/platform/msm_hsusb                  flags=display="USB-OTG";storage;wipeingui;removable
-/sd-ext       auto          /dev/block/mmcblk1p2                         flags=display="SD-Ext";wipeingui;removable
