@@ -3,6 +3,8 @@
 /cache        ext4          /dev/block/platform/soc.0/by-name/cache
 /boot         emmc          /dev/block/platform/soc.0/by-name/boot
 /recovery     emmc          /dev/block/platform/soc.0/by-name/recovery
+/persist      ext4          /dev/block/platform/soc.0/by-name/persist    flags=fsflags=noatime,nosuid,nodev,barrier=1,noauto_da_alloc;mounttodecrypt
+/firmware     ext4          /dev/block/platform/soc.0/by-name/modem      flags=fsflags=ro,nosuid,nodev,barrier=0,context=u:object_r:fsg_file:s0;mounttodecrypt
 
 /external_sd  auto          /dev/block/mmcblk1p1  /dev/block/mmcblk1     flags=display="Micro SDcard";storage;wipeingui;removable;andsec
 /usb_otg      auto          /devices/platform/msm_hsusb                  flags=display="USB-OTG";storage;wipeingui;removable
