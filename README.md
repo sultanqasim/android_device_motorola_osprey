@@ -1,5 +1,4 @@
 #Squid TWRP tree for Moto E LTE (2015)
-* Based off https://github.com/cybojenix/android_device_motorola_surnia
 
 ##Dependencies:
 (you probably don't need most of these)
@@ -15,7 +14,19 @@ mkdir ~/omni-twrp-tree
 cd ~/omni-twrp-tree
 repo init -u https://github.com/sultanqasim/twrp_recovery_manifest.git -b android-5.1
 mkdir -p .repo/local_manifests
-wget https://raw.githubusercontent.com/sultanqasim/twrp_recovery_manifest/android-5.1/styx.xml -O .repo/local_manifests/styx.xml
+````
+
+Create a file .repo/local_manifests/surnia.xml and paste this in
+````
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project name="sultanqasim/android_device_motorola_surnia" path="device/motorola/surnia" remote="github" revision="twrp" />
+    <project name="sultanqasim/android_kernel_surnia" path="kernel/motorola/msm8916" remote="github" revision="squid_twrp" />
+</manifest>
+````
+
+Now fetch the code
+````
 repo sync
 ````
 
@@ -23,7 +34,7 @@ repo sync
 ````
 source build/envsetup.sh
 lunch omni_surnia-userdebug
+make clean
 make installclean
 make -j10 recoveryimage
 ````
-Replace omni_surnia-userdebug with omni_otus-userdebug if you want to build a otus recovery instead.
