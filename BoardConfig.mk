@@ -49,6 +49,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 TARGET_RECOVERY_FSTAB := device/motorola/surnia/twrp.fstab
 
+# don't take forever to wipe
+BOARD_SUPPRESS_SECURE_ERASE := true
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # TWRP
 DEVICE_RESOLUTION := 540x960
