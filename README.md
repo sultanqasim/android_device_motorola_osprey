@@ -21,7 +21,7 @@ Create a file .repo/local_manifests/surnia.xml and paste this in
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <project name="sultanqasim/android_device_motorola_surnia" path="device/motorola/surnia" remote="github" revision="twrp" />
-    <project name="sultanqasim/android_kernel_surnia" path="kernel/motorola/msm8916" remote="github" revision="squid_twrp" />
+    <project name="sultanqasim/android_kernel_motorola_msm8916" path="kernel/motorola/msm8916" remote="github" revision="squid_twrp2" />
 </manifest>
 ````
 
