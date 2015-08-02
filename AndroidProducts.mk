@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_surnia.mk
+    $(LOCAL_DIR)/omni_osprey.mk

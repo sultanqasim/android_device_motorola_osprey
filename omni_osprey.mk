@@ -17,6 +17,6 @@
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-$(call inherit-product, device/motorola/surnia/full_surnia.mk)
+$(call inherit-product, device/motorola/osprey/full_osprey.mk)
 
-PRODUCT_NAME := omni_surnia
+PRODUCT_NAME := omni_osprey
