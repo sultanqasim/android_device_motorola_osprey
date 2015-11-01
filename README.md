@@ -16,14 +16,14 @@ repo init -u https://github.com/sultanqasim/twrp_recovery_manifest.git -b androi
 mkdir -p .repo/local_manifests
 ````
 
-Create a file .repo/local_manifests/osprey.xml and paste this in
+Create a file .repo/local_manifests/motorola.xml and paste this in
 ````
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <project name="sultanqasim/android_device_motorola_surnia" path="device/motorola/surnia" remote="github" revision="twrp" />
     <project name="sultanqasim/android_device_motorola_osprey" path="device/motorola/osprey" remote="github" revision="twrp" />
     <project name="sultanqasim/android_device_motorola_lux" path="device/motorola/lux" remote="github" revision="twrp" />
-    <project name="sultanqasim/android_kernel_motorola_msm8916" path="kernel/motorola/msm8916" remote="github" revision="twrp" />
+    <project name="sultanqasim/android_kernel_motorola_msm8916" path="kernel/motorola/msm8916" remote="github" revision="squid_linux_mr1" />
     <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="github" revision="cm-12.1" />
 </manifest>
 ````
